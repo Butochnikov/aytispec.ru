@@ -22,3 +22,4 @@ yarn-error.log
 /.zed
 AGENTS.md
 *.DS_Store
+/.cursor

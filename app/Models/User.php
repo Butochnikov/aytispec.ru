@@ -61,24 +61,4 @@ class User extends Authenticatable
             ->implode('');
     }
 
-    /**
-     * Interact with the user's money attribute.
-     */
-    protected function money(): Attribute
-    {
-        return Attribute::make(
-            get: fn ($value) => $value,
-            set: fn ($value) => $value,
-        );
-    }
-
-    /**
-     * Get the user's money in cents.
-     */
-    protected function moneyInCents(): Attribute
-    {
-        return Attribute::make(
-            get: fn () => isset($this->attributes['money']) ? (int) ($this->attributes['money'] * 100) : 0,
-        );
-    }
 }
